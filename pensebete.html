@@ -1,0 +1,36 @@
+Ceci est un pense bête
+
+
+Commandes Ruby : 
+
+
+Générer nouvelle page : 
+- rails generate controller pages home
+(génère local/pages/home)
+
+
+Change page d'acueil
+- Aller dans config/routes.rb
+- root "pages#home"
+
+Détruire pages : 
+- rails destroy pages
+
+
+Créer une page depuis le code :
+- Controllers/pages_controller.rb
+- Ajouter un def nom end
+- ajouter un fichier nomdepage.html.erb dans view/pages
+- ajouter get "nomdepage" => "pages#nomdepage" dans config/routes.rb
+
+Créer un lien avec ruby vers une autre page ruby (remplacer par "URL" si besoin)
+- Aller sur la page que je souhaite modifier (ex :home.html.erb)
+- <%= link_to"TEXT" , nomdepage_path %>
+
+
+
+
+
+keyword planner
+
+Primary Keyword - Secondary Keyword | Brand name

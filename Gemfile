@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.2.4'
+ruby '2.3.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
@@ -22,6 +22,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'devise', '~> 3.5.6'
 
 group :development, :test do
 	gem 'sqlite3'

@@ -28,6 +28,62 @@ Créer un lien avec ruby vers une autre page ruby (remplacer par "URL" si besoin
 - <%= link_to"TEXT" , nomdepage_path %>
 
 
+Créer un menu fixe (haut de page):
+l'inclure dans le body (au dessus du yeld) dans views/layout/application.html.erb
+
+
+Ajouter gem boostrap :
+- ajouter gem "bootstrap-sass" dans gemfile
+- lancer bundle install
+- aller dans app/assets/stylesheets/
+- créer file bootstrap_and_customization.css.scss
+- y ajouter @import 'bootstrap';
+
+Intégrer contenu dans container :
+- Go dans views/layouts/application
+- Ouvrir le container avant yeld
+- fermer apres yeld
+
+
+Recopier facilement du code :
+(Exemple avec le default navbar de bootstrap)
+Au lieu de le mettre dans le layout/applications
+- créer fichier _header.html.erb dans views/layouts
+- coller son code (ici le menu)
+- Aller dans views/layouts/application.html.erb
+- ecrire <%= render 'layouts/header' %>
+
+A quoi ca sert ? cela permet d'appeler du code écrit ailleurs, le _ devant header indique le type du fichier ( = a ne pas traiter)
+
+ATTENTION ! ne pas oublier d'appeler bootstrap dans Javascripts/application.js avec
+//= require bootstrap (sous jquery)
+Sinon l'animation du menu marchera pas
+
+
+Integrer le viewport (adaptation au mobile):
+- Ajouter <meta name="viewport" content="width=device-width, initial-scale=1">
+juste avant la fin du head
+
+Ajouter une class bootstrap depuis une ligne ruby :
+exemple : 
+<p>Sign up .<%= link_to "here" , "#", class:"btn btn-primary" %></p>
+</div>
+
+
+Changer les parametres de bases du theme bootstrap :
+http://getbootstrap.com/customize/
+- aller dans app/assets/stylesheets/bootstrapandcustom
+- se référer au custom pour ajouter des attributs
+Attention ! les ajouter AVANT import.
+exemple : $body-bg:		red;
+
+
+
+
+
+
+
+
 
 
 

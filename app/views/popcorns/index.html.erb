@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Popcorns</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @popcorns.each do |popcorn| %>
+      <tr>
+        <td><%= popcorn.description %></td>
+        <td><%= link_to 'Show', popcorn %></td>
+        <td><%= link_to 'Edit', edit_popcorn_path(popcorn) %></td>
+        <td><%= link_to 'Destroy', popcorn, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Popcorn', new_popcorn_path %>
